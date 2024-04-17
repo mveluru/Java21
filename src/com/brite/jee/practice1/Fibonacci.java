@@ -22,10 +22,29 @@ public class Fibonacci {
         }
         return fibo;
     }
+
+    protected  int fiborecursion(int n){
+        int[] fibo = new int[n];
+        if (n==0 || n==1)
+            return n;
+       return (fiborecursion(n-1)+fiborecursion(n-2));
+    }
+
+    protected  int[] fiboarray(int n){
+        int[] fibo = new int[n];
+        for (int i=0;i<n;i++){
+            fibo[i] = this.fiborecursion(i);
+        }
+        return fibo;
+    }
+
+
  public static void main(String[] args){
      Fibonacci fibo  = new Fibonacci();
      Arrays.stream(fibo.fiboseries(15)).forEach(e-> System.out.print(e+" "));
-
+     System.out.println("Using Recursion");
+     int[] fibarray = fibo.fiboarray(10);
+     Arrays.stream(fibarray).forEach(e-> System.out.print(e+" "));
  }
 
 }
