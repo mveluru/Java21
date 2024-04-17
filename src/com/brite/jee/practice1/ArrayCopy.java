@@ -4,7 +4,7 @@ import java.util.*;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-public class Maxsum {
+public class ArrayCopy {
     public static void main(String[] args) {
 
         //int[] nums = {16, 2, 3, 14, 10, 0,11,4,15,16,17,1};
