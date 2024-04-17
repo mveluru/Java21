@@ -1,11 +1,6 @@
-package com.brite.jee.practice1;
+package com.brite.jee.problems;
 
-import java.util.*;
-import java.util.function.*;
-import java.util.stream.DoubleStream;
 import java.util.stream.IntStream;
-import java.util.stream.LongStream;
-import java.util.stream.Stream;
 
 public class Stack {
     int top=-1;

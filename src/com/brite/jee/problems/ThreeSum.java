@@ -1,6 +1,4 @@
-package com.brite.jee.practice1;
-
-import java.util.Arrays;
+package com.brite.jee.problems;
 
 public class ThreeSum {
 

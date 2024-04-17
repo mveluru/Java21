@@ -1,4 +1,4 @@
-package com.brite.jee.practice1;
+package com.brite.jee.sorting;
 
 import java.util.Arrays;
 

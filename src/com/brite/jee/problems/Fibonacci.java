@@ -1,4 +1,4 @@
-package com.brite.jee.practice1;
+package com.brite.jee.problems;
 
 import java.util.Arrays;
 
@@ -24,8 +24,10 @@ public class Fibonacci {
     }
 
     protected  int fiborecursion(int n){
-        int[] fibo = new int[n];
-        if (n==0 || n==1)
+        if (n>30 && n<0){
+            return 0;
+        }
+        if ((n==0 || n==1))
             return n;
        return (fiborecursion(n-1)+fiborecursion(n-2));
     }

@@ -1,4 +1,4 @@
-package com.brite.jee.practice1;
+package com.brite.jee.problems;
 
 import java.util.ArrayList;
 import java.util.Arrays;

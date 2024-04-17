@@ -1,4 +1,4 @@
-package com.brite.jee.practice1;
+package com.brite.jee.problems;
 
 public class ReverseInteger {
 

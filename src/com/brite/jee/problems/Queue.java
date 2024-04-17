@@ -1,6 +1,5 @@
-package com.brite.jee.practice1;
+package com.brite.jee.problems;
 
-import java.sql.SQLOutput;
 import java.util.Random;
 
 public class Queue {

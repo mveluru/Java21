@@ -1,9 +1,8 @@
-package com.brite.jee.practice1;
+package com.brite.jee.problems;
 
 
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
 public class RemoveDuplicatechars {
 
