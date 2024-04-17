@@ -40,10 +40,64 @@ public class StreamExamples {
         int[] input1 = {2,7,17,19,20,45,56,159,239};
         int[] intput2 = {7,12,15,19,22,34,55,150,159};
 
-        List<Integer> input1list = Arrays.stream(input1).boxed().toList();
-        List<Integer> input2list = Arrays.stream(intput2).boxed().toList();
-        List<Integer> commonlist = input1list.stream().filter(input2list::contains).toList();
-        System.out.println(commonlist);
+        int[] numbers = {1, 1, 1, 2, 3};
+        Arrays.parallelPrefix(numbers,Integer::sum);
+        System.out.println(Arrays.toString(numbers));
+
+
+        //*****Adding two Arrays on Position based******//
+        int[] l1 = {2,4,3};
+        int[] l2 ={5,6,4};
+
+        List<Integer> ll3 = new LinkedList<>();
+
+        IntStream range = IntStream.range(0, Math.min(l1.length, l1.length));
+        List<Integer> ranges = range.map(i -> l1[i] + l2[i]).boxed().sorted(Comparator.reverseOrder()).toList();
+        System.out.println(ranges);
+
+
+        int[] input3 = {2,7,17,19,20,45,56,159,239};
+        int[] intput4 = {7,12,15,19,22,34,55,150,159};
+        // Common elements
+        List<Integer> list1 = Arrays.stream(input3).boxed().toList();
+        List<Integer> list2 = Arrays.stream(intput4).boxed().toList();
+        List<Integer> list3 = list1.stream().filter(list2::contains).toList();
+        System.out.println("Common elements: "+list3);
+
+        // Merge & distinct and sort
+        List<Integer> list4 = new ArrayList<>();
+        list4.addAll(list1);
+        list4.addAll(list2);
+        System.out.println("Merge : " +list4);
+        List<Integer> list5 = list4.stream().distinct().sorted(Comparator.reverseOrder()).toList();
+        System.out.println("Merge,distinct and sort: " + list5);
+
+        //Sum of Arrays
+        Integer sum =  list4.stream().distinct().reduce(Integer::sum).orElse(0).intValue();
+        System.out.println("Sum :"+sum);
+
+
+        List<Integer> oddIntegers = list4.stream().filter(e->(e%2)==1).toList();
+        System.out.println("Odd Number : "+oddIntegers);
+
+        // Duplicate Integer set
+        Set<Integer> dupslist4set = new TreeSet<>();
+        List<Integer> nodupsList = list4.stream().sorted().filter(e->!dupslist4set.add(e)).toList();
+        System.out.println("dupslist4set : "+dupslist4set);
+
+       //Missing Number
+        int[] missingNumbers = new int[]{1,3,5,11,10,14,13,12,7,6};
+
+        List<Integer> slist = Arrays.stream(missingNumbers).boxed().sorted().toList();
+        System.out.println(slist);
+        System.out.println(slist.getFirst()+" : "+slist.getLast());
+        for(int i= slist.getFirst();i<=slist.getLast();i++){
+            if(!slist.contains(i)){
+                System.out.print(i+" ");
+            }
+        }
+
+
 
 
     }
