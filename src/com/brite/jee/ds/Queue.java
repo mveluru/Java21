@@ -1,4 +1,4 @@
-package com.brite.jee.problems;
+package com.brite.jee.ds;
 
 import java.util.Random;
 
