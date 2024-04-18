@@ -1,4 +1,4 @@
-package com.brite.jee.problems;
+package com.brite.jee.leet;
 
 public class FindIndexOfElementInArray {
     public static int findIndex(int[] array,int num){

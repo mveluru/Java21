@@ -1,4 +1,4 @@
-package com.brite.jee.problems;
+package com.brite.jee.leet;
 
 import java.util.*;
 import java.util.stream.Collectors;
