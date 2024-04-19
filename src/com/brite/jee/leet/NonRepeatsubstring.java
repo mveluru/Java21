@@ -6,7 +6,9 @@ import java.util.stream.Collectors;
 public class NonRepeatsubstring {
 
     public static void main(String[] args) {
-        String input = "lkjsdflkjldsfffffsss";
+        //String input = "lkjsdflkjldsfffffsss";
+        //String input = "abcdefghijklmnopqrst";
+        String input = "abcdef";
         Set<String> setinput = new HashSet<>();
         for (int i = 0; i < input.length(); i++) {
             for (int j = i + 1; j <= input.length(); j++) {
@@ -18,12 +20,11 @@ public class NonRepeatsubstring {
             }
         }
 
+        int lenMax = setinput.stream().mapToInt(String::length).max().getAsInt();
+       Set<String> maxLengset = setinput.stream().filter(s -> s.length()==lenMax).collect(Collectors.toSet());
 
         //Arrays.sort(setinput.toArray());
-
-
-        setinput= setinput.stream().sorted(Comparator.comparingInt(String::length)).collect(Collectors.toSet());
-        System.out.println(setinput);
+        System.out.println(maxLengset);
 
 
 
