@@ -12,7 +12,7 @@ public void reverse(String words){
     ListIterator<String> reverseList = toList.listIterator(toList.size());// Java 21
     StringBuilder sb = new StringBuilder();
     while (reverseList.hasPrevious()){
-        sb.append(reverseList.previous()+" ");
+        sb.append(reverseList.previous()).append(" ");
     }
     System.out.println(sb);
     sb.setLength(0);
