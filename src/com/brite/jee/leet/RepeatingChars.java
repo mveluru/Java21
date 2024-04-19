@@ -1,9 +1,8 @@
 package com.brite.jee.leet;
 
-import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class RepeatingChars {
 
