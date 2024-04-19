@@ -8,12 +8,14 @@ public class NonRepeatsubstring {
     public static void main(String[] args) {
         //String input = "lkjsdflkjldsfffffsss";
         //String input = "abcdefghijklmnopqrst";
-        String input = "abcdef";
+        //String input = "abcabcbb";
+        //String input = "bbbbbbb";
+        String input = "pwwkew";
         Set<String> setinput = new HashSet<>();
         for (int i = 0; i < input.length(); i++) {
             for (int j = i + 1; j <= input.length(); j++) {
                 String ss = input.substring(i, j);
-                if (ss.length()>2 && (ss.chars().distinct().count() == ss.length())) {
+                if (ss.length()>=1 && (ss.chars().distinct().count() == ss.length())) {
                     setinput.add(input.substring(i, j));
                 }
 
