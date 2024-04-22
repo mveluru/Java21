@@ -1,6 +1,6 @@
 package com.brite.jee.leet;
 
-public class ThreeSum {
+public class SubArrays {
 
     static void printSubArrays(int[] arr, int start, int end) {
         // Stop if we have reached the end of the array
@@ -39,9 +39,9 @@ public class ThreeSum {
     public static void main(String[] args) {
         int[] nums = {1,2,3,4};
 
-        ThreeSum.printSubArrays(nums, 0, nums.length - 1);
+        SubArrays.printSubArrays(nums, 0, nums.length - 1);
         System.out.println("++++++++++++++++++++");
-        ThreeSum.subarrays(nums);
+        SubArrays.subarrays(nums);
 
     }
 }
