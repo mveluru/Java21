@@ -9,7 +9,8 @@ public class Sum9 {
         //int[] nums = {1, 3, 1, 1, 3, 3, 1};
         //int[] nums = {3, 3, 1, 1, 1, 3, 1};
         //int[] nums = {1, 1, 1, 1, 3, 3, 3};
-        int[] nums = {1, 1, 1, 1, 3, 3, 3, 1};
+        //int[] nums = {1, 1, 1, 1, 3, 3, 3, 1};
+        int[] nums = {1, 1, 1, 4, 4, 1, 1,1,1};
 
         int beginIndex = 0;
         int nextIndex = beginIndex + 1;
