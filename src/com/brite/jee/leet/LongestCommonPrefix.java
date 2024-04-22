@@ -1,38 +1,37 @@
 package com.brite.jee.leet;
 
-import java.util.Arrays;
-import java.util.LinkedHashSet;
-import java.util.Set;
+import java.util.*;
+import java.util.stream.Collectors;
 
-import static java.util.Arrays.stream;
 
 public class LongestCommonPrefix {
 
     public static void main(String[] args) {
 
-
-        String[] stringArray = {"flower", "flow", "flight"};
-
-        int length= Arrays.stream(stringArray).map(e->e.length()).reduce((i1, i2) -> Math.min(i1,i2)).get();
-        System.out.println(length);
-        String value = Arrays.stream(stringArray).filter(e->e.length()==length).findAny().get();
-        Set<String> prefixset = new LinkedHashSet<>();
-        for (int i=0;i<=value.length();i++){
-           String prefix = value.trim().substring(0,i);
-
-           // System.out.println(substringvalue);
-            for(int j =0;j<stringArray.length;j++){
-
-               String substr = stringArray[j].trim().substring(0,i);
-                System.out.println(substr+": "+prefix);
-               if(prefix.equals(substr)){
-                   System.out.println(true);
-               }else{
-                 break;
-               }
+        //String[] stringArray = {"flower", "flow", "flight"};
+        // String[] stringArray = {"flower", "flow", "flog"};
+        String[] stringArray = {"floower", "floowe", "floower"};
+        String[] sortedArray = Arrays.stream(stringArray).sorted().toArray(String[]::new);
+        System.out.println(Arrays.toString(sortedArray));
+        int minlength= Arrays.stream(sortedArray).mapToInt(String::length).min().getAsInt();
+        List<String> prefix = new ArrayList<>();
+        for (int i=0;i<=minlength;i++){
+            boolean isprefix = false;
+            String iss = sortedArray[0].substring(0,i);
+            for (String s:sortedArray){
+                String jss = s.substring(0,i);
+                if (iss.equals(jss) ) {
+                    isprefix = true;
+                }
             }
+            if(isprefix){
+                prefix.add(iss);
+            }
+
         }
-       // System.out.println(prefixset);
+        int maxlen = prefix.stream().mapToInt(e->e.length()).max().getAsInt();
+        Set<String> set = prefix.stream().filter(e->e.length()==maxlen).collect(Collectors.toSet());
+        System.out.println(set);
 
     }
 }
