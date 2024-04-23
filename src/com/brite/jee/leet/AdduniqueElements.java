@@ -23,6 +23,8 @@ public class AdduniqueElements {
 
         }
         System.out.println(sum);
+        int sum1 = uniqueelements.stream().filter(integer->!dups.contains(integer)).reduce(Integer::sum).get().intValue();
+        System.out.println(sum1);
     }
 
 }

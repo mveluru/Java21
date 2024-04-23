@@ -9,8 +9,8 @@ public class LongestCommonPrefix {
     public static void main(String[] args) {
 
         //String[] stringArray = {"flower", "flow", "flight"};
-        // String[] stringArray = {"flower", "flow", "flog"};
-        String[] stringArray = {"floower", "floowe", "floower"};
+        String[] stringArray = {"flower", "flow", "flog"};
+       // String[] stringArray = {"floower", "floowe", "floower"};
         String[] sortedArray = Arrays.stream(stringArray).sorted().toArray(String[]::new);
         System.out.println(Arrays.toString(sortedArray));
         int minlength= Arrays.stream(sortedArray).mapToInt(String::length).min().getAsInt();
@@ -22,6 +22,8 @@ public class LongestCommonPrefix {
                 String jss = s.substring(0,i);
                 if (iss.equals(jss) ) {
                     isprefix = true;
+                }else{
+                    isprefix=false;
                 }
             }
             if(isprefix){
