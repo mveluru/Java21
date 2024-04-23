@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class BubbleSort {
 
-    public void soft(int[] array) {
+    public void sort(int[] array) {
         int n = array.length;
 
         for (int i = 0; i < n; i++) {
@@ -24,6 +24,6 @@ public class BubbleSort {
 public static void main(String[] args){
         BubbleSort bsort = new BubbleSort();
         int[] sort = {21,9,10,20,80,3,50};
-        bsort.soft(sort);
+        bsort.sort(sort);
 }
 }
