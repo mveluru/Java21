@@ -58,6 +58,7 @@ public class StreamExamples {
 
         int[] input3 = {2,7,17,19,20,45,56,159,239};
         int[] intput4 = {7,12,15,19,22,34,55,150,159};
+
         // Common elements
         List<Integer> list1 = Arrays.stream(input3).boxed().toList();
         List<Integer> list2 = Arrays.stream(intput4).boxed().toList();
@@ -97,7 +98,11 @@ public class StreamExamples {
             }
         }
 
-
+        int[] findMin = new int[]{2, 22, 10, 4, 5, 10, 11, 12};
+        int minNumber = Arrays.stream(findMin).min().getAsInt();
+        int maxNumber = Arrays.stream(findMin).max().getAsInt();
+        System.out.println("\nMinNumber:"+ minNumber);
+        System.out.println("\nMaxNumber:"+ maxNumber);
 
 
     }
