@@ -20,9 +20,12 @@ public class StringManupulations {
         StringTokenizer stoken = new StringTokenizer(value);
         System.out.println(stoken.countTokens());
         while (stoken.hasMoreTokens()){
-            System.out.println(stoken.nextToken());
+            System.out.print(stoken.nextToken()+" ");
         }
       List<String> stringsort = Arrays.stream(countSimilar).sorted(Comparator.reverseOrder()).toList();
-        System.out.println(stringsort);
+        System.out.print("\n" +stringsort+" ");
+
+        //length of last-word
+        Arrays.stream(countSimilar).skip(countSimilar.length-1).forEach(s1 -> System.out.println("\n length of last word: "+s1.length()));
     }
 }
