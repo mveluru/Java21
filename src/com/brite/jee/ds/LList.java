@@ -36,7 +36,7 @@ public class LList {
             System.out.println("List is empty");
             return;
         }
-        if (head != null && head.getData() == data) {
+        if ( head.getData() == data) {
             head = head.getNextRef();
         } else {
             Lnode tempNode = head.getNextRef();
@@ -46,20 +46,55 @@ public class LList {
                 if (tempNode.getData() == data) {
                     //System.out.println(data);
                     break;
-                } else if(tempNode.getData()!=data) {
+                } else if (tempNode.getData() != data) {
                     previousNode = tempNode;
                     tempNode = tempNode.getNextRef();
                 }
             }
-           if (tempNode.getNextRef() != null && tempNode.getData() == data) {
+            if (tempNode.getNextRef() != null && tempNode.getData() == data) {
                 previousNode.setNextRef(tempNode.getNextRef());
-               tempNode.setNextRef(null);
+                tempNode.setNextRef(null);
             } else if (tempNode.getNextRef() == null) {
                 previousNode.setNextRef(null);
                 tail = previousNode;
             }
 
         }
+    }
+
+
+    public void swapData(int data) {
+        Lnode tempNode = head.getNextRef();
+        Lnode previousNode = head;
+        if (head.getData() == data) {
+            //swap with next element
+            Lnode temp = head.getNextRef();
+            int tempdata = head.getData();
+            head.setData(temp.getData());
+            temp.setData(tempdata);
+        } else {
+            while (tempNode != null) {
+                if (tempNode.getData() == data) {
+                    if (tempNode.getNextRef() != null) {
+                        Lnode nextNode = tempNode.getNextRef();
+                        int tempnodedata = tempNode.getData();
+                        tempNode.setData(tempNode.getNextRef().getData());
+                        nextNode.setData(tempnodedata);
+                        break;
+                    } else {
+                        System.out.println("unable to swap -data found in tail node");
+                        break;
+                    }
+
+                } else {
+                    previousNode = tempNode;
+                    tempNode = tempNode.getNextRef();
+
+                }
+            }
+        }
+
+
     }
 
     public void reverseList() {
@@ -81,16 +116,21 @@ public class LList {
     }
 
     public static void main(String[] args) {
-        IntStream stream = IntStream.range(1, 26);
+        IntStream stream = IntStream.range(1, 30);
         LList ll = new LList();
-        stream.forEach(e -> ll.insertData(e));
+        stream.forEach(ll::insertData);
         ll.traverse();
+        int swap_element =5 ;
+        System.out.println("\n swap data with next node of the element "+ swap_element);
+        ll.swapData(swap_element);
+        ll.traverse();
+
         System.out.println();
         ll.reverseList();
         System.out.println();
         ll.traverse();
         System.out.println();
-        ll.deleteData(24);
+        ll.deleteData(29);
         System.out.println();
         ll.traverse();
         System.out.println();
