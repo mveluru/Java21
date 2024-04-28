@@ -1,21 +1,48 @@
 package com.brite.jee.leet;
 
+// This code doesn't work on Integer over flow cases.
 public class ReverseInteger {
+    private static int reverseNumber(int x) {
+        long y = x;
+        long sum = 0;
+        boolean isNegativex = false;
 
-    public static void main(String[] args) {
-       Long x = Long.valueOf(23232339);
+        if (x < 0 && x > Integer.MIN_VALUE) {
+            isNegativex = true;
+            x= Math.abs(x);
 
-        Long sum = Long.valueOf(0);
-        while (x > 0) {
-            Long reminder = x % 10;
-            //System.out.print(reminder+" ");
-            sum = (sum * 10 + reminder) <= Integer.MAX_VALUE && ((sum * 10 + reminder) >= 0) ?  sum * 10 + reminder:0;
-            if (sum == 0) {
-                break;
-            }
-            x = x / 10;
+        } else if (x > Integer.MAX_VALUE && x < Integer.MIN_VALUE) {
+            sum = y;
+            return (int) sum;
         }
 
-        System.out.println(sum);
+        while (x > 0) {
+            int reminder = x % 10;
+                sum = (sum * 10);
+            if (sum == (int) sum && sum > Integer.MIN_VALUE && sum < Integer.MAX_VALUE) {
+                 sum = sum + reminder;
+                  x = x / 10;
+            }
+            if (sum != (int) sum || sum < Integer.MIN_VALUE && sum > Integer.MAX_VALUE ){
+                sum = y;
+                return (int) sum;
+            }
+
+        }
+
+        sum = isNegativex ?  sum * (-1) : (int) sum;
+        return (int)sum;
+    }
+
+    public static void main(String[] args) {
+        //Integer x = 321;
+        //Integer x = -123;
+        //Integer x = 120;
+       // System.out.println(Integer.MIN_VALUE);
+        Integer x = -2147483641;
+
+
+
+        System.out.println(ReverseInteger.reverseNumber(x));
     }
 }
