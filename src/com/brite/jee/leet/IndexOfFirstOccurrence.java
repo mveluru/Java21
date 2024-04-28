@@ -9,8 +9,8 @@ public class IndexOfFirstOccurrence {
             for(int i=0;i<haystacklength;i++){
                 String substring = haystack.substring(i,i+needleLength);
                 if (needle.equals(substring)){
-                System.out.println(substring);
-                System.out.println("equal  "+i+" , "+(i+needleLength));
+                //System.out.println(substring);
+                System.out.println("equal  "+"beginning Index :" +i+  " ending index  "+((i+needleLength)));
                 break;
                 }
             }
@@ -28,8 +28,10 @@ public class IndexOfFirstOccurrence {
         //String needle = "sad";
         //String haystack = "greekforgreek";
         //String needle = "for";
-        String haystack ="kavihellohello";
-        String needle = "hello";
+       // String haystack ="kavihellohello";
+        //String needle = "hello";
+        String haystack ="dubaikamir";
+        String needle = "mir";
 
         IndexOfFirstOccurrence.strStr(haystack, needle);
     }
