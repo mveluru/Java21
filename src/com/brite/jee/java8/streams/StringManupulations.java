@@ -1,4 +1,4 @@
-package com.brite.jee.leet;
+package com.brite.jee.java8.streams;
 
 import java.util.*;
 import java.util.function.Function;
