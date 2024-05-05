@@ -1,4 +1,4 @@
-package com.brite.jee.leet;
+package com.brite.jee.java8.streams;
 
 import java.util.*;
 import java.util.stream.Collectors;
@@ -9,21 +9,13 @@ public class StreamExamples {
         IntStream intStream1 = IntStream.rangeClosed(1, 50); //includes both starting and ending
         IntStream intStream2 = IntStream.range(51, 100); //includes starting end exclusive
 
+        System.out.println("Collect InStream as set");
+        /*--Collect Instream as set --*/
         Set<Integer> set1 = intStream1.boxed().collect(Collectors.toSet());
         Set<Integer> set2 = intStream2.boxed().collect(Collectors.toSet());
 
-        System.out.println("Collect InStream as as set");
         System.out.println(set1);
         System.out.println(set2);
-
-        System.out.println("Sum of the numbers");
-        int[] nums = {1, 3, 5, 7, 9};
-        int value = Arrays.stream(nums).reduce(0, Integer::sum);
-        System.out.println(Arrays.toString(nums));
-        System.out.println(value);
-
-        int value1 = Arrays.stream(nums).boxed().collect(Collectors.summingInt(Integer::intValue));
-        System.out.println(value1);
 
         System.out.println("Natural Order");
         int[] numss =new int[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11};
