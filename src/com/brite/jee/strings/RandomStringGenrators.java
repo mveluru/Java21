@@ -1,4 +1,4 @@
-package com.brite.jee.string_chars;
+package com.brite.jee.strings;
 
 import java.util.Random;
 
