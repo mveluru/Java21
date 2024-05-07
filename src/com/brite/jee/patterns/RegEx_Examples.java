@@ -7,7 +7,7 @@ public class RegEx_Examples {
 
 
     private static boolean noVowels(String input){
-        String regex ="[^aeiouAEIOU]+";
+        String regex ="[^aeiouAEIOU]+"; //+ Quantifier
         Pattern pattern = Pattern.compile(regex);
         Matcher matcher = pattern.matcher(input);
         return matcher.find();
