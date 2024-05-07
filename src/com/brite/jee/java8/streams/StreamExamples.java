@@ -30,17 +30,13 @@ public class StreamExamples {
        int a = Arrays.stream(numss).boxed().sorted().skip((numss.length-1)).findFirst().get();
         System.out.println(a);
 
-        int[] array = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
-        System.out.println(Arrays.stream(array).boxed().skip(array.length-1).findFirst().get());
+
 
         int[] dupsarray = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 8,9};
 
         Set<Integer> finalDupsets = new HashSet<>();
         System.out.println(Arrays.stream(dupsarray).boxed().filter(e->!finalDupsets.add(e)).collect(Collectors.toSet()));
 
-        // common integers
-        int[] input1 = {2,7,17,19,20,45,56,159,239};
-        int[] intput2 = {7,12,15,19,22,34,55,150,159};
 
         int[] numbers = {1, 1, 1, 2, 3};
         Arrays.parallelPrefix(numbers,Integer::sum);
@@ -75,9 +71,7 @@ public class StreamExamples {
         List<Integer> list5 = list4.stream().distinct().sorted(Comparator.reverseOrder()).toList();
         System.out.println("Merge,distinct and sort: " + list5);
 
-        //Sum of Arrays
-        Integer sum =  list4.stream().distinct().reduce(Integer::sum).orElse(0).intValue();
-        System.out.println("Sum :"+sum);
+
 
 
         List<Integer> oddIntegers = list4.stream().filter(e->(e%2)==1).toList();
