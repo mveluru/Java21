@@ -1,4 +1,4 @@
-package com.brite.jee.ds;
+package com.brite.jee.datastructures;
 
 import java.util.Arrays;
 

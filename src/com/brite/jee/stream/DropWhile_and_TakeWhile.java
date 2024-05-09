@@ -1,4 +1,4 @@
-package com.brite.stream;
+package com.brite.jee.stream;
 
 import java.util.stream.IntStream;
 

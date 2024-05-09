@@ -1,4 +1,4 @@
-package com.brite.recursion;
+package com.brite.jee.recursion;
 
 public class print1To100 {
 
