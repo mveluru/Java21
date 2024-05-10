@@ -1,4 +1,4 @@
-package com.brite.jee.leet.easy;
+package com.brite.jee.leet.medium;
 
 // This code doesn't work on Integer over flow cases.
 public class ReverseInteger {
