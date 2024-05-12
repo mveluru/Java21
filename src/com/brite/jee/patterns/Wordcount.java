@@ -34,8 +34,23 @@ public class Wordcount {
 
     }
 
+
+    public static void numberOfWords(String sentence) {
+        Pattern pattern = Pattern.compile("\\w+");
+        Matcher matcher = pattern.matcher(sentence);
+        int count = 0;
+        while (matcher.find()) {
+            count++;
+        }
+        System.out.println("Number of words : " + count);
+
+
+    }
+
+
     public static void main(String[] args) {
         String sentence = "Big black bug bit a big black dog on his big black nose";
-       wordcounts(sentence);
+        wordcounts(sentence);
+        numberOfWords(sentence);
     }
 }
