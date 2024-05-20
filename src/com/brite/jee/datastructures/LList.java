@@ -36,7 +36,7 @@ public class LList {
             System.out.println("List is empty");
             return;
         }
-        if ( head.getData() == data) {
+        if (head.getData() == data) {
             head = head.getNextRef();
         } else {
             Lnode tempNode = head.getNextRef();
@@ -97,6 +97,28 @@ public class LList {
 
     }
 
+    private void insertBeforeSpecificElement(int insertbeforedata, int data) {
+        Lnode newNode = new Lnode(data);
+        if (head != null && head.getData() == insertbeforedata) {
+            Lnode tempNode = head;
+            head = newNode;
+            head.setNextRef(tempNode);
+        } else {
+            Lnode nextNode = head.getNextRef();
+            Lnode previousNode = head;
+            while (nextNode != null) {
+                if (nextNode.getData() == insertbeforedata) {
+                    previousNode.setNextRef(newNode);
+                    newNode.setNextRef(nextNode);
+                    break;
+                } else {
+                    previousNode = nextNode;
+                    nextNode = nextNode.nextRef;
+                }
+            }
+        }
+    }
+
     public void reverseList() {
         Lnode previousNode = null;
         Lnode currentNode = head;
@@ -120,8 +142,8 @@ public class LList {
         LList ll = new LList();
         stream.forEach(ll::insertData);
         ll.traverse();
-        int swap_element =5 ;
-        System.out.println("\n swap data with next node of the element "+ swap_element);
+        int swap_element = 5;
+        System.out.println("\n swap data with next node of the element " + swap_element);
         ll.swapData(swap_element);
         ll.traverse();
 
@@ -136,6 +158,10 @@ public class LList {
         System.out.println();
         ll.deleteData(12);
         System.out.println();
+        ll.traverse();
+        ll.insertBeforeSpecificElement(5,20);
+        ll.insertBeforeSpecificElement(0,21);
+        ll.insertBeforeSpecificElement(9,22);
         ll.traverse();
 
     }
