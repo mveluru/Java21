@@ -138,7 +138,7 @@ public class LList {
     }
 
     public static void main(String[] args) {
-        IntStream stream = IntStream.range(1, 30);
+        IntStream stream = IntStream.range(0, 30);
         LList ll = new LList();
         stream.forEach(ll::insertData);
         ll.traverse();
@@ -159,9 +159,10 @@ public class LList {
         ll.deleteData(12);
         System.out.println();
         ll.traverse();
-        ll.insertBeforeSpecificElement(5,20);
-        ll.insertBeforeSpecificElement(0,21);
-        ll.insertBeforeSpecificElement(9,22);
+        System.out.println();
+        ll.insertBeforeSpecificElement(5,200);
+        ll.insertBeforeSpecificElement(0,210);
+        ll.insertBeforeSpecificElement(9,220);
         ll.traverse();
 
     }
