@@ -1,11 +1,6 @@
 package com.java21.grind75.week1;
 
-import com.java21.algorithms.Node;
-
 import java.util.Arrays;
-import java.util.Comparator;
-import java.util.List;
-import java.util.stream.Collectors;
 
 public class Bubblesort {
     public void bsort(int[] array) {
