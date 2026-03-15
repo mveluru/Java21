@@ -1,11 +1,11 @@
 package com.java21.algorithms;
 
-public class LNode {
+public class LLNode {
     public int data;
 
-    public LNode nextRef;
+    public LLNode nextRef;
 
-    public LNode(int data) {
+    public LLNode(int data) {
         this.data = data;
     }
 
@@ -17,11 +17,11 @@ public class LNode {
         this.data = data;
     }
 
-    public LNode getNextRef() {
+    public LLNode getNextRef() {
         return nextRef;
     }
 
-    public void setNextRef(LNode nextRef) {
+    public void setNextRef(LLNode nextRef) {
         this.nextRef = nextRef;
     }
 
