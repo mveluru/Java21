@@ -14,9 +14,13 @@ public class MissingNumber {
         }
         System.out.println(sum);
     }
+    public static void StringToInt(String str) {
+        System.out.println(Integer.parseInt(str));
+    }
     public static void main(String[] args) {
         int[] arr = new int[] { 1, 2, 3, 4, 6, 7, 8, 9 };
         missingNumber(arr);
+        StringToInt("1234567");
 
     }
 }
