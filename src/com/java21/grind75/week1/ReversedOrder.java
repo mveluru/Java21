@@ -17,6 +17,8 @@ public class ReversedOrder {
         int largest = nums.stream().max(Integer::compareTo).get();
         // find smallest number
         int smallest = nums.stream().min(Integer::compareTo).get();
+        int largestIndex = nums.stream().min(Comparator.reverseOrder()).get();
+        System.out.println(largestIndex);
 
         // Top 3
         List<Integer> largestList = nums.stream().sorted(Comparator.reverseOrder()).limit(3).toList();
