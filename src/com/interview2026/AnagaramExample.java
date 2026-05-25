@@ -1,9 +1,15 @@
 package com.interview2026;
 
 import java.util.Arrays;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class AnagaramExample {
+
+    private static boolean nonNull(Object o){
+        return Objects.nonNull(o);
+    }
+
     public static void main(String[] args) {
         String s1 = "Silent".toLowerCase();
         String s2 = "listen".toLowerCase();
