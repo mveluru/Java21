@@ -1,4 +1,4 @@
-package com.interview2026;
+package com.interview2026.hard;
 
 public class SealedClass {
     public static void main(String[] args) {

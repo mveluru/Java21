@@ -1,4 +1,4 @@
-package com.interview2026;
+package com.interview2026.easy;
 
 public class print100Recursion {
 

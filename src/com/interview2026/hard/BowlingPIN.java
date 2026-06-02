@@ -1,4 +1,4 @@
-package com.interview2026;
+package com.interview2026.hard;
 
 import java.util.HashSet;
 import java.util.Scanner;

@@ -1,4 +1,4 @@
-package com.interview2026;
+package com.interview2026.easy;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package com.interview2026;
+package com.interview2026.medium;
 
 import java.util.Arrays;
 import java.util.Scanner;
